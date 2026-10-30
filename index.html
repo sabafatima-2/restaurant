@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saffron & Stone — seasonal food, warm hospitality, and memorable dining in Hyderabad.">
+<title>Saffron & Stone | Modern Indian Kitchen</title>
+<style>
+:root{--ink:#20231f;--cream:#f7f4ed;--paper:#fffdf8;--green:#344b3d;--sage:#dce4d8;--gold:#c58b45;--muted:#74776f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.nav{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:var(--paper);position:sticky;top:0;z-index:5;border-bottom:1px solid #e9e4d9}.brand{font-size:1.45rem;font-weight:bold;letter-spacing:.02em}.brand span{color:var(--gold)}.navlinks{display:flex;gap:28px;align-items:center;font:500 .9rem Arial,sans-serif}.navlinks a:hover{color:var(--gold)}.nav-cta,.btn{background:var(--green);color:white;padding:13px 20px;border:0;display:inline-block;cursor:pointer;font:600 .85rem Arial,sans-serif;letter-spacing:.04em}.nav-cta:hover,.btn:hover{background:#24372c}
+.hero{min-height:610px;display:grid;grid-template-columns:1fr 1fr;background:var(--green);color:white}.hero-copy{padding:100px 9% 80px 14%;display:flex;flex-direction:column;justify-content:center}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font:600 .72rem Arial,sans-serif;color:var(--gold)}h1{font-size:clamp(3.2rem,6vw,5.6rem);line-height:.98;font-weight:normal;margin:22px 0}.hero p{font:1.05rem/1.8 Arial,sans-serif;color:#e1e5dc;max-width:440px}.hero .btn{background:var(--gold);margin-top:18px;align-self:flex-start}.hero-image{min-height:480px;background:linear-gradient(90deg,rgba(20,35,27,.18),transparent),url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85') center/cover}
+section{padding:88px 8%}.section-head{text-align:center;max-width:650px;margin:0 auto 44px}.section-head h2{font-size:clamp(2.2rem,4vw,3.5rem);font-weight:normal;margin:12px 0}.section-head p{font:1rem/1.7 Arial,sans-serif;color:var(--muted)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.dish{background:var(--paper);padding-bottom:20px}.dish img{width:100%;height:220px;object-fit:cover;display:block}.dish-info{padding:18px 20px}.dish-title{display:flex;justify-content:space-between;gap:12px;font-size:1.2rem}.price{color:var(--gold);white-space:nowrap}.dish p{font: .9rem/1.6 Arial,sans-serif;color:var(--muted);margin-bottom:0}
+.story{background:var(--sage);display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}.story img{width:100%;height:440px;object-fit:cover}.story h2{font-size:clamp(2.3rem,4vw,3.7rem);font-weight:normal;margin:14px 0}.story p{font:1rem/1.9 Arial,sans-serif;color:#59645b}
+.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}.gallery-grid img{width:100%;height:250px;object-fit:cover}.gallery-grid img:first-child{height:514px;grid-row:span 2}
+.visit{background:var(--green);color:white}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%;max-width:1000px;margin:auto}.visit h2{font-size:3rem;font-weight:normal;margin:12px 0 24px}.visit p,.visit li{font:1rem/1.9 Arial,sans-serif;color:#e1e5dc}.hours{list-style:none;padding:0}.hours li{display:flex;justify-content:space-between;border-bottom:1px solid #637467;padding:10px 0;gap:15px}
+.booking{background:var(--paper);max-width:850px;margin:auto;padding:44px}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field label{display:block;font:600 .78rem Arial,sans-serif;margin-bottom:8px}.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid #d9d5cb;background:#fffdf8;color:var(--ink);border-radius:0}.field.full{grid-column:1/-1}.booking button{margin-top:20px}.notice{font: .88rem/1.6 Arial,sans-serif;color:var(--muted);margin-top:14px}
+footer{background:#1e2d24;color:#e6e8e1;padding:34px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font: .85rem Arial,sans-serif}
+@media(max-width:760px){.nav{padding:0 5%;height:68px}.navlinks{gap:12px}.navlinks a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:75px 8%}.hero-image{min-height:330px}.menu-grid{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}.story img{height:300px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img:first-child{height:250px;grid-row:auto}.visit-grid{grid-template-columns:1fr}.booking{padding:25px}}
+@media(max-width:480px){.menu-grid{grid-template-columns:1fr}.booking-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:170px}.gallery-grid img:first-child{height:170px}.brand{font-size:1.15rem}.nav-cta{padding:11px 12px}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home">SAFFRON <span>&</span> STONE</a>
+  <nav class="navlinks" aria-label="Main navigation">
+    <a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a>
+    <a class="nav-cta" href="#reservations">BOOK A TABLE</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home" style="padding:0">
+  <div class="hero-copy">
+    <div class="eyebrow">A modern Indian kitchen · Hyderabad</div>
+    <h1>Good food.<br>Good company.</h1>
+    <p>Seasonal ingredients, thoughtful cooking, and the kind of hospitality that makes you want to stay a little longer.</p>
+    <a class="btn" href="#menu">EXPLORE OUR MENU</a>
+  </div>
+  <div class="hero-image" role="img" aria-label="A colorful table of freshly prepared food"></div>
+</section>
+
+<section id="menu">
+  <div class="section-head"><div class="eyebrow">Made with care</div><h2>A taste of our kitchen</h2><p>A few guest favourites from a menu inspired by local ingredients and familiar flavours.</p></div>
+  <div class="menu-grid">
+    <article class="dish"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Freshly baked vegetable pizza"><div class="dish-info"><div class="dish-title"><span>Garden Harvest Flatbread</span><span class="price">₹420</span></div><p>Roasted vegetables, herbs, whipped cheese and a crisp house-made base.</p></div></article>
+    <article class="dish"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80" alt="Indian curry served with rice"><div class="dish-info"><div class="dish-title"><span>Slow-Cooked House Curry</span><span class="price">₹390</span></div><p>A comforting, fragrant curry with seasonal vegetables and warm spices.</p></div></article>
+    <article class="dish"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Grilled food platter"><div class="dish-info"><div class="dish-title"><span>Smoky Grill Platter</span><span class="price">₹560</span></div><p>Char-grilled bites, fresh salad, house chutney and lemon.</p></div></article>
+    <article class="dish"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Fresh seasonal salad"><div class="dish-info"><div class="dish-title"><span>Market Garden Salad</span><span class="price">₹310</span></div><p>Crisp greens, seasonal produce, toasted seeds and citrus dressing.</p></div></article>
+    <article class="dish"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Golden pastry snacks"><div class="dish-info"><div class="dish-title"><span>Golden Spice Bites</span><span class="price">₹260</span></div><p>Crunchy savoury bites served with two freshly made dips.</p></div></article>
+    <article class="dish"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Dessert with berries and cream"><div class="dish-info"><div class="dish-title"><span>Seasonal Dessert</span><span class="price">₹240</span></div><p>A sweet finish made in-house with the best of the season.</p></div></article>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85" alt="Beautifully set restaurant dining table">
+  <div><div class="eyebrow">The Saffron & Stone feeling</div><h2>Gather around<br>something lovely.</h2><p>We believe a great meal is about more than what's on the plate. It's the conversation that runs late, the dish everyone shares, and the welcome that feels familiar. Our kitchen brings a fresh perspective to comforting flavours.</p><a class="btn" href="#reservations">COME DINE WITH US</a></div>
+</section>
+
+<section id="gallery">
+  <div class="section-head"><div class="eyebrow">A little look inside</div><h2>From our table to yours</h2><p>Good food is worth taking a moment for.</p></div>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Warm restaurant dining room">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Fresh colorful dish">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Restaurant table setting">
+    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Restaurant guests dining">
+    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurant interior detail">
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-grid">
+    <div><div class="eyebrow">Find your way here</div><h2>We saved you a seat.</h2><p><strong>Saffron & Stone</strong><br>Jubilee Hills, Hyderabad, Telangana<br><br>Phone: +91 90000 12345<br>Email: hello@saffronandstone.example</p><a class="btn" href="#reservations">MAKE A RESERVATION</a></div>
+    <div><div class="eyebrow">Come by</div><h2>Opening hours</h2><ul class="hours"><li><span>Monday – Friday</span><span>12 PM – 10:30 PM</span></li><li><span>Saturday</span><span>12 PM – 11 PM</span></li><li><span>Sunday</span><span>12 PM – 10:30 PM</span></li></ul><p>Hours and contact details shown are sample content. Please confirm before visiting.</p></div>
+  </div>
+</section>
+
+<section id="reservations">
+  <div class="section-head"><div class="eyebrow">Your table is waiting</div><h2>Make a reservation</h2><p>Send us your preferred date and time. This demo form displays your request but does not send a booking to a restaurant.</p></div>
+  <form class="booking" id="bookingForm">
+    <div class="booking-grid">
+      <div class="field"><label for="guest">Your name</label><input id="guest" name="guest" placeholder="Full name" required></div>
+      <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="+91" required></div>
+      <div class="field"><label for="date">Date</label><input id="date" name="date" type="date" required></div>
+      <div class="field"><label for="time">Preferred time</label><select id="time" name="time" required><option value="">Choose a time</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></div>
+      <div class="field"><label for="guests">Number of guests</label><select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+      <div class="field"><label for="occasion">Occasion</label><select id="occasion" name="occasion"><option>Just dining</option><option>Birthday</option><option>Anniversary</option><option>Family gathering</option><option>Other</option></select></div>
+      <div class="field full"><label for="notes">Special requests (optional)</label><textarea id="notes" name="notes" rows="3" placeholder="Any details you'd like us to know?"></textarea></div>
+    </div>
+    <button class="btn" type="submit">REQUEST A TABLE</button>
+    <div class="notice" id="formMessage" role="status" aria-live="polite">Demo only — connect this form to a booking service to receive real reservations.</div>
+  </form>
+</section>
+</main>
+<footer><div><strong>SAFFRON & STONE</strong><br><span>Modern Indian Kitchen · Hyderabad</span></div><div>Made for good food and good company.</div><div>© <span id="year"></span> Saffron & Stone</div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const dateInput=document.getElementById('date');dateInput.min=new Date().toISOString().split('T')[0];
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();if(!this.reportValidity())return;const d=new FormData(this);document.getElementById('formMessage').textContent=`Thanks, ${d.get('guest')}! Your demo request is for ${d.get('guests')} guest(s) on ${d.get('date')} at ${d.get('time')}. This has not been sent or booked.`;});
+</script>
+</body>
+</html>
